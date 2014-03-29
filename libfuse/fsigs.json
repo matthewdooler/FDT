@@ -1,0 +1,392 @@
+[
+    {
+        "params": [
+            "const char *", 
+            "struct stat *"
+        ], 
+        "name": "getattr", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "char *", 
+            "size_t"
+        ], 
+        "name": "readlink", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "fuse_dirh_t", 
+            "fuse_dirfil_t"
+        ], 
+        "name": "getdir", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "mode_t", 
+            "dev_t"
+        ], 
+        "name": "mknod", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "mode_t"
+        ], 
+        "name": "mkdir", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *"
+        ], 
+        "name": "unlink", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *"
+        ], 
+        "name": "rmdir", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "const char *"
+        ], 
+        "name": "symlink", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "const char *"
+        ], 
+        "name": "rename", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "const char *"
+        ], 
+        "name": "link", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "mode_t"
+        ], 
+        "name": "chmod", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "uid_t", 
+            "gid_t"
+        ], 
+        "name": "chown", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "off_t"
+        ], 
+        "name": "truncate", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "struct utimbuf *"
+        ], 
+        "name": "utime", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "open", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "char *", 
+            "size_t", 
+            "off_t", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "read", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "const char *", 
+            "size_t", 
+            "off_t", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "write", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "struct statvfs *"
+        ], 
+        "name": "statfs", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "flush", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "release", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "int", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "fsync", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "const char *", 
+            "const char *", 
+            "size_t", 
+            "int"
+        ], 
+        "name": "setxattr", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "const char *", 
+            "char *", 
+            "size_t"
+        ], 
+        "name": "getxattr", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "char *", 
+            "size_t"
+        ], 
+        "name": "listxattr", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "const char *"
+        ], 
+        "name": "removexattr", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "opendir", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "void *", 
+            "fuse_fill_dir_t", 
+            "off_t", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "readdir", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "releasedir", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "int", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "fsyncdir", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "struct fuse_conn_info *conn"
+        ], 
+        "name": "init", 
+        "rtype": "void *"
+    }, 
+    {
+        "params": [
+            "void *"
+        ], 
+        "name": "destroy", 
+        "rtype": "void"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "int"
+        ], 
+        "name": "access", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "mode_t", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "create", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "off_t", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "ftruncate", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "struct stat *", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "fgetattr", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "struct fuse_file_info *", 
+            "int cmd", 
+            "struct flock *"
+        ], 
+        "name": "lock", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "const struct timespec tv[2]"
+        ], 
+        "name": "utimens", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "size_t blocksize", 
+            "uint64_t *idx"
+        ], 
+        "name": "bmap", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "int cmd", 
+            "void *arg", 
+            "struct fuse_file_info *", 
+            "unsigned int flags", 
+            "void *data"
+        ], 
+        "name": "ioctl", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "struct fuse_file_info *", 
+            "struct fuse_pollhandle *ph", 
+            "unsigned *reventsp"
+        ], 
+        "name": "poll", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "struct fuse_bufvec *buf", 
+            "off_t off", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "write_buf", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "struct fuse_bufvec **bufp", 
+            "size_t size", 
+            "off_t off", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "read_buf", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "struct fuse_file_info *", 
+            "int op"
+        ], 
+        "name": "flock", 
+        "rtype": "int"
+    }, 
+    {
+        "params": [
+            "const char *", 
+            "int", 
+            "off_t", 
+            "off_t", 
+            "struct fuse_file_info *"
+        ], 
+        "name": "fallocate", 
+        "rtype": "int"
+    }
+]
