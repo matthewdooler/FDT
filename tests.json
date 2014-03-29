@@ -1,0 +1,4141 @@
+[[{
+			"action":	"Mounted filesystem",
+			"application":	"Finder",
+			"os":	"Mac OS X 10.7.4",
+			"calls":	[{
+					"name":	"init",
+					"params":	{
+						"conn":	{
+							"proto_major":	7,
+							"proto_minor":	8,
+							"async_read":	0,
+							"max_write":	16777216,
+							"max_readahead":	1048576,
+							"enable":	{
+								"case_insensitive":	0,
+								"setvolname":	0,
+								"xtimes":	0
+							}
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311596960,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299099808,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299099808,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"opendir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"releasedir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594299100864,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594299100864,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/mach_kernel",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.hidden",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"opendir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299099504,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/DCIM",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Spotlight-V100",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.metadata_never_index",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.metadata_never_index",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299102672,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299102672,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/mach_kernel",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	3,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.hidden",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Backups.backupdb",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Backups.backupdb",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Backups.backupdb",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Backups.backupdb",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}]
+		}, {
+			"action":	"Opened root directory",
+			"application":	"Finder",
+			"os":	"Mac OS X 10.7.4",
+			"calls":	[{
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311597888,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	4
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.DS_Store",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.DS_Store",
+						"size":	4096,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	7,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	7,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.DS_Store",
+						"size":	2052,
+						"offset":	4096,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	7,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	7,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.DS_Store",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	7,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"fh":	7,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.DS_Store",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	7,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	7,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.ResourceFork",
+						"value":	0,
+						"size":	0,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311594576,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311594576,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299101520,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.ResourceFork",
+						"value":	0,
+						"size":	0,
+						"position":	0
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	3,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299101520,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311597888,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299101520,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.ResourceFork",
+						"value":	0,
+						"size":	0,
+						"position":	0
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	3,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311594576,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311594576,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299101520,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.ResourceFork",
+						"value":	0,
+						"size":	0,
+						"position":	0
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	3,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}]
+		}, {
+			"action":	"Focused on window",
+			"application":	"Finder",
+			"os":	"Mac OS X 10.7.4",
+			"calls":	[{
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311597888,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299102672,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299102672,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.ResourceFork",
+						"value":	0,
+						"size":	0,
+						"position":	0
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	3,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}]
+		}, {
+			"action":	"Created new directory",
+			"application":	"Finder",
+			"os":	"Mac OS X 10.7.4",
+			"calls":	[{
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299102672,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299102672,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311594576,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.ResourceFork",
+						"value":	0,
+						"size":	0,
+						"position":	0
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	3,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/untitled folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"mkdir",
+					"params":	{
+						"path":	"/untitled folder",
+						"mode":	16877
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/untitled folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/untitled folder",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299101520,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/untitled folder",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299102672,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311596608,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/untitled folder",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311596608,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trashes",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trashes",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.TemporaryItems",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/untitled folder",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299102672,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/untitled folder",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299101520,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/untitled folder",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311596608,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/untitled folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311596608,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311596608,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299102256,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.ResourceFork",
+						"value":	0,
+						"size":	0,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/untitled folder",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311596608,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	4,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}]
+		}, {
+			"action":	"Focused on window",
+			"application":	"Finder",
+			"os":	"Mac OS X 10.7.4",
+			"calls":	[{
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299102256,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311596608,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.DS_Store",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594299102256,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/.DS_Store",
+						"name":	"com.apple.ResourceFork",
+						"value":	0,
+						"size":	0,
+						"position":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/untitled folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/untitled folder",
+						"name":	"com.apple.FinderInfo",
+						"value":	140594311596608,
+						"size":	32,
+						"position":	0
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140594299102528,
+						"filler":	4502290784,
+						"offset":	4,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140594311596960,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"fh":	140594311596960,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}]
+		}]]
