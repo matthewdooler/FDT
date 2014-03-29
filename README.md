@@ -1,4 +1,0 @@
-fdt
-===
-
-FUSE Diagnostic Tool
