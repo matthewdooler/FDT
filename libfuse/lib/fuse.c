@@ -39,6 +39,7 @@
 #include <sys/time.h>
 #include <sys/mman.h>
 #include <semaphore.h>
+#include <glib.h>
 
 #define FUSE_NODE_SLAB 1
 
@@ -90,6 +91,7 @@ struct fuse_fs {
 	int debug;
 	int next_seqnum;
 	pthread_mutex_t seqnum_lock;
+	GSList * latencies;
 };
 
 struct fusemod_so {
@@ -1808,6 +1810,10 @@ int next_seqnum(struct fuse_fs * fs) {
 // Wrappers around user-defined FUSE ops
 int fuse_op_wrapper_getattr(void *fs_ptr, const char * path, struct stat * s)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -1816,15 +1822,30 @@ int fuse_op_wrapper_getattr(void *fs_ptr, const char * path, struct stat * s)
 	cJSON_AddItemToObject(params, "stat", statToJSONObject(s));
     report_fs_call(fs, "getattr", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.getattr(path, s);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
 	cJSON_AddItemToObject(modified_params, "stat", statToJSONObject(s));
     report_fs_call_return(fs, "getattr", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_readlink(void *fs_ptr, const char * path, char * link, size_t size)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -1834,15 +1855,30 @@ int fuse_op_wrapper_readlink(void *fs_ptr, const char * path, char * link, size_
 	cJSON_AddNumberToObject(params, "size", size);
     report_fs_call(fs, "readlink", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.readlink(path, link, size);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddStringToObject(modified_params, "link", link);
     report_fs_call_return(fs, "readlink", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_getdir(void *fs_ptr, const char * path, fuse_dirh_t b, fuse_dirfil_t c)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -1850,14 +1886,29 @@ int fuse_op_wrapper_getdir(void *fs_ptr, const char * path, fuse_dirh_t b, fuse_
 	cJSON_AddStringToObject(params, "path", path);
     report_fs_call(fs, "getdir", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.getdir(path, b, c);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "getdir", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_mknod(void *fs_ptr, const char * path, mode_t mode, dev_t dev)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -1867,14 +1918,29 @@ int fuse_op_wrapper_mknod(void *fs_ptr, const char * path, mode_t mode, dev_t de
 	cJSON_AddNumberToObject(params, "dev", dev);
     report_fs_call(fs, "mknod", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.mknod(path, mode, dev);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "mknod", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_mkdir(void *fs_ptr, const char * path, mode_t mode)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -1883,14 +1949,29 @@ int fuse_op_wrapper_mkdir(void *fs_ptr, const char * path, mode_t mode)
 	cJSON_AddNumberToObject(params, "mode", mode);
     report_fs_call(fs, "mkdir", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.mkdir(path, mode);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "mkdir", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_unlink(void *fs_ptr, const char * path)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -1898,14 +1979,29 @@ int fuse_op_wrapper_unlink(void *fs_ptr, const char * path)
 	cJSON_AddStringToObject(params, "path", path);
     report_fs_call(fs, "unlink", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.unlink(path);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "unlink", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_rmdir(void *fs_ptr, const char * path)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -1913,14 +2009,29 @@ int fuse_op_wrapper_rmdir(void *fs_ptr, const char * path)
 	cJSON_AddStringToObject(params, "path", path);
     report_fs_call(fs, "rmdir", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.rmdir(path);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "rmdir", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_symlink(void *fs_ptr, const char * path, const char * link)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -1929,14 +2040,29 @@ int fuse_op_wrapper_symlink(void *fs_ptr, const char * path, const char * link)
 	cJSON_AddStringToObject(params, "link", link);
     report_fs_call(fs, "symlink", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.symlink(path, link);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "symlink", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_rename(void *fs_ptr, const char * path, const char * newpath)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -1945,14 +2071,29 @@ int fuse_op_wrapper_rename(void *fs_ptr, const char * path, const char * newpath
 	cJSON_AddStringToObject(params, "newpath", newpath);
     report_fs_call(fs, "rename", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.rename(path, newpath);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "rename", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_link(void *fs_ptr, const char * path, const char * newpath)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -1961,14 +2102,29 @@ int fuse_op_wrapper_link(void *fs_ptr, const char * path, const char * newpath)
 	cJSON_AddStringToObject(params, "newpath", newpath);
     report_fs_call(fs, "link", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.link(path, newpath);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "link", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_chmod(void *fs_ptr, const char * path, mode_t mode)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -1977,14 +2133,29 @@ int fuse_op_wrapper_chmod(void *fs_ptr, const char * path, mode_t mode)
 	cJSON_AddNumberToObject(params, "mode", mode);
     report_fs_call(fs, "chmod", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.chmod(path, mode);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "chmod", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_chown(void *fs_ptr, const char * path, uid_t uid, gid_t gid)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -1994,14 +2165,29 @@ int fuse_op_wrapper_chown(void *fs_ptr, const char * path, uid_t uid, gid_t gid)
 	cJSON_AddNumberToObject(params, "gid", gid);
     report_fs_call(fs, "chown", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.chown(path, uid, gid);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "chown", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_truncate(void *fs_ptr, const char * path, off_t newsize)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2010,14 +2196,29 @@ int fuse_op_wrapper_truncate(void *fs_ptr, const char * path, off_t newsize)
 	cJSON_AddNumberToObject(params, "newsize", newsize);
     report_fs_call(fs, "truncate", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.truncate(path, newsize);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "truncate", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_utime(void *fs_ptr, const char * path, struct utimbuf * ubuf)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2026,15 +2227,30 @@ int fuse_op_wrapper_utime(void *fs_ptr, const char * path, struct utimbuf * ubuf
 	cJSON_AddItemToObject(params, "ubuf", utimbufToJSONObject(ubuf));
     report_fs_call(fs, "utime", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.utime(path, ubuf);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "ubuf", utimbufToJSONObject(ubuf));
     report_fs_call_return(fs, "utime", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_open(void *fs_ptr, const char * path, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2043,15 +2259,30 @@ int fuse_op_wrapper_open(void *fs_ptr, const char * path, struct fuse_file_info 
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "open", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.open(path, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "open", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_read(void *fs_ptr, const char * path, char * buf, size_t size, off_t offset, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2062,36 +2293,66 @@ int fuse_op_wrapper_read(void *fs_ptr, const char * path, char * buf, size_t siz
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "read", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.read(path, buf, size, offset, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
-    cJSON_AddStringToObject(modified_params, "buf", buf);
+    //cJSON_AddStringToObject(modified_params, "buf", buf);
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "read", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_write(void *fs_ptr, const char * path, const char * buf, size_t size, off_t offset, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
     cJSON *params = cJSON_CreateObject();	
 	cJSON_AddStringToObject(params, "path", path);
-	cJSON_AddStringToObject(params, "buf", buf);
+	//cJSON_AddStringToObject(params, "buf", buf);
 	cJSON_AddNumberToObject(params, "size", size);
 	cJSON_AddNumberToObject(params, "offset", offset);
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "write", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.write(path, buf, size, offset, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "write", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_statfs(void *fs_ptr, const char * path, struct statvfs * statvfs)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2100,15 +2361,30 @@ int fuse_op_wrapper_statfs(void *fs_ptr, const char * path, struct statvfs * sta
 	cJSON_AddItemToObject(params, "statvfs", statvfsToJSONObject(statvfs));
     report_fs_call(fs, "statfs", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.statfs(path, statvfs);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "statvfs", statvfsToJSONObject(statvfs));
     report_fs_call_return(fs, "statfs", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_flush(void *fs_ptr, const char * path, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2117,15 +2393,30 @@ int fuse_op_wrapper_flush(void *fs_ptr, const char * path, struct fuse_file_info
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "flush", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.flush(path, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "flush", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_release(void *fs_ptr, const char * path, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2134,15 +2425,30 @@ int fuse_op_wrapper_release(void *fs_ptr, const char * path, struct fuse_file_in
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "release", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.release(path, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "release", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_fsync(void *fs_ptr, const char * path, int datasync, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2152,15 +2458,30 @@ int fuse_op_wrapper_fsync(void *fs_ptr, const char * path, int datasync, struct 
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "fsync", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.fsync(path, datasync, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "fsync", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_setxattr(void *fs_ptr, const char * path, const char * name, const char * value, size_t size, int flags)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2172,14 +2493,29 @@ int fuse_op_wrapper_setxattr(void *fs_ptr, const char * path, const char * name,
 	cJSON_AddNumberToObject(params, "flags", flags);
     report_fs_call(fs, "setxattr", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.setxattr(path, name, value, size, flags);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "setxattr", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_getxattr(void *fs_ptr, const char * path, const char * name, char * value, size_t size)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2190,8 +2526,12 @@ int fuse_op_wrapper_getxattr(void *fs_ptr, const char * path, const char * name,
 	cJSON_AddNumberToObject(params, "size", size);
     report_fs_call(fs, "getxattr", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.getxattr(path, name, value, size);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     if(value != NULL) {
     	cJSON_AddStringToObject(modified_params, "value", value);
@@ -2199,10 +2539,21 @@ int fuse_op_wrapper_getxattr(void *fs_ptr, const char * path, const char * name,
     	cJSON_AddNullToObject(modified_params, "value");
     }
     report_fs_call_return(fs, "getxattr", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_listxattr(void *fs_ptr, const char * path, char * list, size_t size)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2212,8 +2563,12 @@ int fuse_op_wrapper_listxattr(void *fs_ptr, const char * path, char * list, size
 	cJSON_AddNumberToObject(params, "size", size);
     report_fs_call(fs, "listxattr", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.listxattr(path, list, size);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     if(list != NULL) {
     	cJSON_AddStringToObject(modified_params, "list", list);
@@ -2221,10 +2576,21 @@ int fuse_op_wrapper_listxattr(void *fs_ptr, const char * path, char * list, size
     	cJSON_AddNullToObject(modified_params, "list");
     }
     report_fs_call_return(fs, "listxattr", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_removexattr(void *fs_ptr, const char * path, const char * name)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2233,14 +2599,29 @@ int fuse_op_wrapper_removexattr(void *fs_ptr, const char * path, const char * na
 	cJSON_AddStringToObject(params, "name", name);
     report_fs_call(fs, "removexattr", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.removexattr(path, name);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "removexattr", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_opendir(void *fs_ptr, const char * path, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2249,15 +2630,30 @@ int fuse_op_wrapper_opendir(void *fs_ptr, const char * path, struct fuse_file_in
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "opendir", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.opendir(path, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "opendir", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_readdir(void *fs_ptr, const char * path, void * buf, fuse_fill_dir_t filler, off_t offset, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2269,15 +2665,30 @@ int fuse_op_wrapper_readdir(void *fs_ptr, const char * path, void * buf, fuse_fi
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "readdir", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.readdir(path, buf, filler, offset, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "readdir", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_releasedir(void *fs_ptr, const char * path, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2286,15 +2697,30 @@ int fuse_op_wrapper_releasedir(void *fs_ptr, const char * path, struct fuse_file
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "releasedir", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.releasedir(path, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "releasedir", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_fsyncdir(void *fs_ptr, const char * path, int datasync, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2304,47 +2730,102 @@ int fuse_op_wrapper_fsyncdir(void *fs_ptr, const char * path, int datasync, stru
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "fsyncdir", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.fsyncdir(path, datasync, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "fsyncdir", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 void * fuse_op_wrapper_init(void *fs_ptr, struct fuse_conn_info *conn)
 {
-	fprintf(stderr, "fuse_op_wrapper_init invoke\n");
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
     cJSON *params = cJSON_CreateObject();
     cJSON_AddItemToObject(params, "conn", fuseConnInfoToJSONObject(conn));
     report_fs_call(fs, "init", seqnum, params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
 
-    fprintf(stderr, "non-wrapper invoke\n");
     void * r = fs->op.init(conn);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "conn", fuseConnInfoToJSONObject(conn));
     report_fs_call_return(fs, "init", seqnum, NULL, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 void fuse_op_wrapper_destroy(void *fs_ptr, void * userdata)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
     cJSON *params = cJSON_CreateObject();
     cJSON_AddNumberToObject(params, "userdata", (uintptr_t) userdata);
     report_fs_call(fs, "destroy", seqnum, params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
 
     fs->op.destroy(userdata);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "destroy", seqnum, NULL, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+	fs->latencies = g_slist_append(fs->latencies, c_elapsed);
+
+	// Output the latencies
+	GSList * node = fs->latencies;
+	printf("[");
+    while(node != NULL) {
+        double * latency = (double *) node->data;
+        printf("%lf,", *latency);
+        free(latency);
+        node = node->next;
+    }
+    printf("]\n");
 }
+
 int fuse_op_wrapper_access(void *fs_ptr, const char * path, int mask)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2353,14 +2834,29 @@ int fuse_op_wrapper_access(void *fs_ptr, const char * path, int mask)
 	cJSON_AddNumberToObject(params, "mask", mask);
     report_fs_call(fs, "access", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.access(path, mask);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "access", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_create(void *fs_ptr, const char * path, mode_t mode, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2370,15 +2866,30 @@ int fuse_op_wrapper_create(void *fs_ptr, const char * path, mode_t mode, struct 
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "create", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.create(path, mode, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "create", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_ftruncate(void *fs_ptr, const char * path, off_t offset, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2388,15 +2899,30 @@ int fuse_op_wrapper_ftruncate(void *fs_ptr, const char * path, off_t offset, str
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "ftruncate", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.ftruncate(path, offset, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "ftruncate", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_fgetattr(void *fs_ptr, const char * path, struct stat * s, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2406,16 +2932,31 @@ int fuse_op_wrapper_fgetattr(void *fs_ptr, const char * path, struct stat * s, s
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "fgetattr", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.fgetattr(path, s, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "stat", statToJSONObject(s));
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "fgetattr", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_lock(void *fs_ptr, const char * path, struct fuse_file_info * fi, int cmd, struct flock * flock)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2426,16 +2967,31 @@ int fuse_op_wrapper_lock(void *fs_ptr, const char * path, struct fuse_file_info 
 	cJSON_AddItemToObject(params, "flock", flockToJSONObject(flock));
     report_fs_call(fs, "lock", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.lock(path, fi, cmd, flock);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     cJSON_AddItemToObject(modified_params, "flock", flockToJSONObject(flock));
     report_fs_call_return(fs, "lock", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_utimens(void *fs_ptr, const char * path, const struct timespec tv[2])
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2444,14 +3000,29 @@ int fuse_op_wrapper_utimens(void *fs_ptr, const char * path, const struct timesp
 	cJSON_AddItemToObject(params, "tv", timespecArrayToJSONObject(tv, 2));
     report_fs_call(fs, "utimens", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.utimens(path, tv);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     report_fs_call_return(fs, "utimens", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_bmap(void *fs_ptr, const char * path, size_t blocksize, uint64_t * idx)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2465,8 +3036,12 @@ int fuse_op_wrapper_bmap(void *fs_ptr, const char * path, size_t blocksize, uint
 	}
     report_fs_call(fs, "bmap", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.bmap(path, blocksize, idx);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     if(idx != NULL) {
 		cJSON_AddNumberToObject(modified_params, "idx", *idx);
@@ -2474,10 +3049,21 @@ int fuse_op_wrapper_bmap(void *fs_ptr, const char * path, size_t blocksize, uint
 		cJSON_AddNullToObject(modified_params, "idx");
 	}
     report_fs_call_return(fs, "bmap", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_ioctl(void *fs_ptr, const char * path, int cmd, void * arg, struct fuse_file_info * fi, unsigned int flags, void * data)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2490,15 +3076,30 @@ int fuse_op_wrapper_ioctl(void *fs_ptr, const char * path, int cmd, void * arg, 
 	cJSON_AddNumberToObject(params, "data", (uintptr_t) data);
     report_fs_call(fs, "ioctl", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.ioctl(path, cmd, arg, fi, flags, data);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "ioctl", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_poll(void *fs_ptr, const char * path, struct fuse_file_info * fi, struct fuse_pollhandle * ph, unsigned * reventsp)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2513,8 +3114,12 @@ int fuse_op_wrapper_poll(void *fs_ptr, const char * path, struct fuse_file_info 
 	}
     report_fs_call(fs, "poll", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.poll(path, fi, ph, reventsp);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     if(reventsp != NULL) {
@@ -2523,10 +3128,21 @@ int fuse_op_wrapper_poll(void *fs_ptr, const char * path, struct fuse_file_info 
 		cJSON_AddNullToObject(modified_params, "reventsp");
 	}
     report_fs_call_return(fs, "poll", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_write_buf(void *fs_ptr, const char * path, struct fuse_bufvec *buf, off_t off, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2537,15 +3153,30 @@ int fuse_op_wrapper_write_buf(void *fs_ptr, const char * path, struct fuse_bufve
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "write_buf", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.write_buf(path, buf, off, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "write_buf", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_read_buf(void *fs_ptr, const char * path, struct fuse_bufvec ** bufp, size_t size, off_t off, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2557,8 +3188,12 @@ int fuse_op_wrapper_read_buf(void *fs_ptr, const char * path, struct fuse_bufvec
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "read_buf", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.read_buf(path, bufp, size, off, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     if(bufp != NULL && *bufp != NULL) {
 		cJSON_AddItemToObject(modified_params, "bufp", fuseBufvecToJSONObject(*bufp));
@@ -2567,10 +3202,21 @@ int fuse_op_wrapper_read_buf(void *fs_ptr, const char * path, struct fuse_bufvec
 	}
 	cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "read_buf", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_flock(void *fs_ptr, const char * path, struct fuse_file_info * fi, int op)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2580,15 +3226,30 @@ int fuse_op_wrapper_flock(void *fs_ptr, const char * path, struct fuse_file_info
 	cJSON_AddNumberToObject(params, "op", op);
     report_fs_call(fs, "flock", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.flock(path, fi, op);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "flock", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 int fuse_op_wrapper_fallocate(void *fs_ptr, const char * path, int mode, off_t offset, off_t len, struct fuse_file_info * fi)
 {
+    struct timespec ts_start;
+    struct timespec ts_end;
+
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     struct fuse_fs *fs = (struct fuse_fs *) fs_ptr;
     int seqnum = next_seqnum(fs);
 
@@ -2600,11 +3261,22 @@ int fuse_op_wrapper_fallocate(void *fs_ptr, const char * path, int mode, off_t o
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call(fs, "fallocate", seqnum, params);
     
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double invoke_overhead = diff_timespec(&ts_end, &ts_start);
+
     int r = fs->op.fallocate(path, mode, offset, len, fi);
 
+    clock_gettime(CLOCK_REALTIME, &ts_start);
     cJSON *modified_params = cJSON_CreateObject();
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "fallocate", seqnum, &r, modified_params);
+    
+    clock_gettime(CLOCK_REALTIME, &ts_end);
+    double return_overhead = diff_timespec(&ts_end, &ts_start);
+    double * c_elapsed = malloc(sizeof(*c_elapsed));
+    
+    *c_elapsed = invoke_overhead + return_overhead;
+    fs->latencies = g_slist_append(fs->latencies, c_elapsed);
     return r;
 }
 

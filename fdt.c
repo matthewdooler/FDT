@@ -151,7 +151,9 @@ void setTestDataFile(const char * fname) {
     printf("Set test data file to '%s'\n", test_data_file);
 }
 
-// Setup environment variables before executing a filesystem, mainly for communication with libfuse
+/**
+ * Setup environment variables before executing a filesystem, mainly for communication with libfuse
+ */
 char ** getEnvVarsForFork(const char * tool_ident) {
     char ** envp = malloc(10 * sizeof(char*));
     size_t envp_idx = 0;
