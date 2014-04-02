@@ -153,6 +153,8 @@ void * doStartDebugger(void * ptr) {
         
         // Construct a chunk of JSON
         int unclosed_braces = 0;
+        bool unclosed_quotes = false;
+        bool escaping = false;
         chunk_pos = 0;
         
         do {
@@ -166,8 +168,12 @@ void * doStartDebugger(void * ptr) {
                     json_chunk = realloc(json_chunk, json_chunk_capacity);
                 }
                 json_chunk[chunk_pos++] = (char) c;
-                if(c == '{') unclosed_braces++;
-                if(c == '}') unclosed_braces--;
+                if(!unclosed_quotes && c == '{') unclosed_braces++;
+                else if(!unclosed_quotes && c == '}') unclosed_braces--;
+                else if(!escaping && c == '"') unclosed_quotes = !unclosed_quotes;
+
+                if(c == '\\') escaping = true;
+                else escaping = false;
             }
         } while(unclosed_braces > 0);
         json_chunk[chunk_pos++] = '\0';
@@ -332,14 +338,15 @@ void showParams(cJSON * node, GtkTreeIter parent) {
 }
 
 void handleDebuggerEvent(cJSON * event) {
+
     char * type = cJSON_GetObjectItem(event, "type")->valuestring;
     char * name = cJSON_GetObjectItem(event, "name")->valuestring;
     int seqnum = cJSON_GetObjectItem(event, "seqnum")->valueint;
     
     if(strcmp(type, "invoke") == 0) {
         printf("[->] (%d)\t%s\n", seqnum, name);
-        cJSON * params = cJSON_GetObjectItem(event, "params");
-        printf("%s\n", cJSON_Print(params));
+        //cJSON * params = cJSON_GetObjectItem(event, "params");
+        //printf("%s\n", cJSON_Print(params));
 
         pendingInvocations++;
         if(closing || autoAdvance) {
@@ -362,8 +369,8 @@ void handleDebuggerEvent(cJSON * event) {
         } else {
             printf("[<-] (%d)\t%s (returned an unexpected type)\n", seqnum, name);
         }
-        cJSON *modified_params = cJSON_GetObjectItem(event, "modified_params");
-        printf("%s\n", cJSON_Print(modified_params));
+        //cJSON *modified_params = cJSON_GetObjectItem(event, "modified_params");
+        //printf("%s\n", cJSON_Print(modified_params));
     } else {
         fprintf(stderr, "Unexpected event type '%s'\n", type);
     }

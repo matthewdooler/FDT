@@ -14,6 +14,7 @@
 #include <gtk/gtk.h>
 #include <dirent.h>
 #include <errno.h>
+#include <ctype.h>
 
 #include "wizard.h"
 #include "testsuite.h"
@@ -48,6 +49,36 @@ static GtkWidget * arguments_field;
 static GtkWidget * start_button;
 static GtkWidget * stop_button;
 static GtkWidget * tabs;
+
+char * bufferToAscii(const char * str) {
+    size_t size = strlen(str);
+
+    // Work out if the string is ASCII printable
+    bool printable = true;
+    for(int i = 0; i < size; i++) {
+        if(!isprint(str[i])) {
+            printable = false;
+        }
+    }
+
+    if(printable) {
+        // String printable so just return it
+        char * dst = malloc(size + 1);
+        for(int i = 0; i < size; i++) {
+            dst[i] = str[i];
+        }
+        dst[size] = '\0';
+        return dst;
+    } else {
+        // Format as hex if not printable
+        char * dst = malloc((size*2) + 1);
+        for(int i = 0; i < size; i++) {
+            sprintf(dst+(i*2), "%02X", str[i]);
+        }
+        dst[size] = '\0';
+        return dst;
+    }
+}
 
 bool isUsingGui() {
     return usingGui;
@@ -209,9 +240,9 @@ GtkWidget * createBinarySelectionWidgets() {
         binary_field = gtk_entry_new();
         gtk_widget_show(binary_field);
         #if __APPLE__
-            gtk_entry_set_text(GTK_ENTRY(binary_field), "/Users/md49/hg/CS4099-MajorSP/loopback-mac/loopback"); // TODO: empty by default
+            gtk_entry_set_text(GTK_ENTRY(binary_field), "/Users/md49/hg/CS4099-MajorSP/loopback-mac/loopback");
         #else
-            gtk_entry_set_text(GTK_ENTRY(binary_field), "/home/md49/hg/CS4099-MajorSP/demofs-2/bbfs"); // TODO: empty by default
+            gtk_entry_set_text(GTK_ENTRY(binary_field), "/home/md49/hg/CS4099-MajorSP/demofs-2/bbfs");
         #endif
         gtk_box_pack_start((GtkBox *) bin_box, binary_field, FALSE, TRUE, 0);
 
@@ -230,9 +261,9 @@ GtkWidget * createBinarySelectionWidgets() {
         arguments_field = gtk_entry_new();
         gtk_widget_show(arguments_field);
         #if __APPLE__
-            gtk_entry_set_text(GTK_ENTRY(arguments_field), "/tmp/lfsroot -f /tmp/lfsmnt -oallow_other,native_xattr,volname=LoopbackFS"); // TODO -f /tmp/mountpoint
+            gtk_entry_set_text(GTK_ENTRY(arguments_field), "/tmp/lfsroot -f /tmp/lfsmnt -oallow_other,native_xattr,volname=LoopbackFS");
         #else
-            gtk_entry_set_text(GTK_ENTRY(arguments_field), "-f rootdir /tmp/fsmnt"); // TODO -f /tmp/mountpoint
+            gtk_entry_set_text(GTK_ENTRY(arguments_field), "-f rootdir /tmp/fsmnt");
         #endif
         gtk_box_pack_start((GtkBox *) args_box, arguments_field, TRUE, TRUE, 0);
     gtk_widget_show(args_box);
@@ -564,10 +595,9 @@ static void childKilled(int sig) {
             }
 
             if(!clean_exit) {
-                printf("Filesystem unmounted unexpectedly\n");
                 if(strlen(shared_error) == 0) {
                     // Child exited but didn't pass an error message
-                    setSharedError("FUSE binary terminated. Check the console for a possible cause.");
+                    setSharedError("FUSE module terminated unexpectedly or crashed. This is likely due to a runtime error in the filesystem, so check the console for the cause.");
                 }
                 fuse_pid = 0;
                 *fs_mounted = FALSE;

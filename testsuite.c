@@ -158,6 +158,8 @@ void * doStartTestsuite(void * ptr) {
     while(fifo_open) {
         // Construct a chunk of JSON
         int unclosed_braces = 0;
+        bool unclosed_quotes = false;
+        bool escaping = false;
         chunk_pos = 0;
         
         do {
@@ -171,8 +173,12 @@ void * doStartTestsuite(void * ptr) {
                     json_chunk = realloc(json_chunk, json_chunk_capacity);
                 }
                 json_chunk[chunk_pos++] = (char) c;
-                if(c == '{') unclosed_braces++;
-                if(c == '}') unclosed_braces--;
+                if(!unclosed_quotes && c == '{') unclosed_braces++;
+                else if(!unclosed_quotes && c == '}') unclosed_braces--;
+                else if(!escaping && c == '"') unclosed_quotes = !unclosed_quotes;
+
+                if(c == '\\') escaping = true;
+                else escaping = false;
             }
         } while(unclosed_braces > 0);
         json_chunk[chunk_pos++] = '\0';
@@ -248,8 +254,8 @@ gboolean gui_idle_testsuite(void) {
             } else if(strcmp(test_name, "__SEQUENCE_END") == 0) {
                 // Close Sequence branch and display whether it passed or failed
                 char * result = NULL;
-                if(cJSON_GetObjectItem(event, "passed")->valueint == 0) result = "FAILED";
-                else result = "OK";
+                if(cJSON_GetObjectItem(event, "passed")->valueint == 0) result = "FAIL";
+                else result = "PASS";
                 gdk_threads_enter();
                 gtk_tree_store_set(GTK_TREE_STORE(event_table_model), sequence_iter, 1, result, -1);
                 gdk_threads_leave();
@@ -271,8 +277,8 @@ gboolean gui_idle_testsuite(void) {
                 // Add call to current Sequence branch
                 GtkTreeIter iter;
                 char * result = NULL;
-                if(cJSON_GetObjectItem(event, "passed")->valueint == 0) result = "FAILED";
-                else result = "OK";
+                if(cJSON_GetObjectItem(event, "passed")->valueint == 0) result = "FAIL";
+                else result = "PASS";
                 gdk_threads_enter();
                 gtk_tree_store_append(GTK_TREE_STORE(event_table_model), &iter, sequence_iter);
                 gtk_tree_store_set(GTK_TREE_STORE(event_table_model), &iter, 0, test_name, 1, result, -1);

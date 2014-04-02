@@ -38,6 +38,11 @@ static GHashTable * fhs_passthru;
 static GHashTable * fhs_real;
 static char * mountpoint;
 
+struct fh_entry {
+    uint64_t fh;
+    int open;
+};
+
 void empty_fi(struct fuse_file_info * fi);
 void empty_fi(struct fuse_file_info * fi)
 {
@@ -56,12 +61,21 @@ void store_fh(GHashTable * fhs, const char * path, uint64_t fh) {
     size_t path_len = strlen(path);
     char * path_m = malloc(path_len + 1);
     strcpy(path_m, path);
-    g_hash_table_insert(fhs, path_m, (void *) fh);
+    struct fh_entry * entry = malloc(sizeof(*entry));
+    entry->fh = fh;
+    entry->open = 0;
+    g_hash_table_insert(fhs, path_m, (void *) entry);
+}
+
+void increment_open(GHashTable * fhs, const char * path);
+void increment_open(GHashTable * fhs, const char * path) {
+    struct fh_entry * entry = ((struct fh_entry *) g_hash_table_lookup(fhs, path));
+    entry->open++;
 }
 
 uint64_t path_to_fh(GHashTable * fhs, const char * path);
 uint64_t path_to_fh(GHashTable * fhs, const char * path) {
-    return (uint64_t) g_hash_table_lookup(fhs, path);
+    return ((struct fh_entry *) g_hash_table_lookup(fhs, path))->fh;
 }
 
 void update_fi(GHashTable * fhs, const char * path, struct fuse_file_info * fi, cJSON * obj);
@@ -87,7 +101,15 @@ void update_fi(GHashTable * fhs, const char * path, struct fuse_file_info * fi, 
 void destroy_fh(GHashTable * fhs, const char * path);
 void destroy_fh(GHashTable * fhs, const char * path)
 {
-    g_hash_table_remove(fhs, (void *) path);
+    // Find the file entry and decrement its open counter
+    struct fh_entry * entry = ((struct fh_entry *) g_hash_table_lookup(fhs, path));
+    entry->open--;
+
+    // If we've had a close for every open then we can remove the entry
+    if(entry->open == 0) {
+        g_hash_table_remove(fhs, (void *) path);
+        free(entry);
+    }
 }
 
 struct stat * json_to_stat(cJSON * obj);
@@ -819,7 +841,6 @@ int make_call(const struct fuse_operations * op, const char * func_name, cJSON *
                 const char * path = cJSON_GetObjectItem(params, "path")->valuestring;
                 const char * newpath = cJSON_GetObjectItem(params, "newpath")->valuestring;
                 retval = op->rename(path, newpath);
-                // TODO: May need to modify the path->fh map
             } else {
                 *func_not_defined = true;
             }
@@ -883,6 +904,7 @@ int make_call(const struct fuse_operations * op, const char * func_name, cJSON *
                 update_fi(NULL, NULL, fi, cJSON_GetObjectItem(params, "fi"));
                 retval = op->open(path, fi);
                 store_fh(fhs, path, fi->fh);
+                increment_open(fhs, path);
             } else {
                 *func_not_defined = true;
             }
@@ -941,7 +963,7 @@ int make_call(const struct fuse_operations * op, const char * func_name, cJSON *
                 const char * path = cJSON_GetObjectItem(params, "path")->valuestring;
                 update_fi(fhs, path, fi, cJSON_GetObjectItem(params, "fi"));
                 retval = op->release(path, fi);
-                destroy_fh(fhs, path);
+                //destroy_fh(fhs, path);
             } else {
                 *func_not_defined = true;
             }
@@ -1034,6 +1056,7 @@ int make_call(const struct fuse_operations * op, const char * func_name, cJSON *
                 update_fi(NULL, NULL, fi, cJSON_GetObjectItem(params, "fi"));
                 retval = op->opendir(path, fi);
                 store_fh(fhs, path, fi->fh);
+                increment_open(fhs, path);
             } else {
                 *func_not_defined = true;
             }
@@ -1057,8 +1080,8 @@ int make_call(const struct fuse_operations * op, const char * func_name, cJSON *
             if(op->releasedir != NULL) {
                 const char * path = cJSON_GetObjectItem(params, "path")->valuestring;
                 update_fi(fhs, path, fi, cJSON_GetObjectItem(params, "fi"));
-                retval = op->releasedir(path, fi);
-                destroy_fh(fhs, path);
+                //retval = op->releasedir(path, fi);
+                //destroy_fh(fhs, path);
             } else {
                 *func_not_defined = true;
             }

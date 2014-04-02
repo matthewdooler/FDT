@@ -283,7 +283,7 @@ void test_rmdir(const struct fuse_operations * op) {
 					if(errno == ENOENT) {
 						test_pass(__func__, 2, optional);
 					} else {
-						test_fail(__func__, 2, optional, "Set errno to ENOENT when trying to delete a directory that does not exist.");
+						test_fail(__func__, 2, optional, "Set errno to ENOENT when trying to delete a directory that does not exist (\"%s\").", non_existent_dir);
 					}
 				} else {
 					test_skip(__func__, 2, optional);
@@ -328,7 +328,7 @@ void test_mkdir(const struct fuse_operations * op) {
 						if(errno == EEXIST) {
 							test_pass(__func__, 3, optional);
 						} else {
-							test_fail(__func__, 3, optional, "Set errno to EEXIST when trying to create a directory that already exists.");
+							test_fail(__func__, 3, optional, "Set errno to EEXIST when trying to create a directory that already exists (\"%s\").", new_dir);
 						}
 					} else {
 						test_fail(__func__, 2, optional, "Return a negative number if there was an error creating the directory. It currently returns %d when trying to create \"%s\", which had already been created. The filesystem is either returning the wrong value, or new directories are not being persisted.", retval, new_dir);
@@ -379,7 +379,7 @@ void test_unlink(const struct fuse_operations * op) {
 					if(errno == ENOENT) {
 						test_pass(__func__, 2, optional);
 					} else {
-						test_fail(__func__, 2, optional, "Set errno to ENOENT when trying to delete a file that does not exist.");
+						test_fail(__func__, 2, optional, "Set errno to ENOENT when trying to delete a file that does not exist (\"%s\").", non_existent_file);
 					}
 				} else {
 					test_skip(__func__, 2, optional);
@@ -463,7 +463,7 @@ void test_fgetattr(const struct fuse_operations * op) {
 			if(retval == 0) {
 				test_pass(__func__, 1, optional);
 			} else {
-				test_fail(__func__, 1, optional, "Return 0 when a file exists. It currently returns %d when called with the path and filehandle of a file just created and opened.", retval);
+				test_fail(__func__, 1, optional, "Return 0 when a file exists. It currently returns %d when called with the path and filehandle of a file just created and opened (\"%s\").", retval, new_file);
 			}
 			free(stbuf);
 
@@ -573,12 +573,12 @@ int filler(void * buf, const char * name, const struct stat * stbuf, off_t off) 
 		printf("Directory contains file '%s' and offset is %td\n", name, off);
 
 		// Make sure offsets count upwards with each filler call, starting from 1
-		if(!is_skipped("test_readdir", 2)) {
+		/*if(!is_skipped("test_readdir", 2)) {
 			if(off-1 != files_filled) {
 				test_fail("test_readdir", 2, FALSE, "Call filler with incrementing offsets, starting from 1. It currently returned %d instead of %d, on iteration %d.", off, files_filled+1, files_filled);
 				bad_increment = TRUE;
 			}
-		}
+		}*/
 
 		// Check for each of the 4 files we expect
 		if(strcmp(name, ".") == 0) {
@@ -669,7 +669,7 @@ void test_readdir(const struct fuse_operations * op) {
 				if(filled_new_file_1) {
 					test_pass(__func__, 5, optional);
 				} else {
-					test_fail(__func__, 5, optional, "Invoke filler callback with one of the files just created (\"new_file_1.txt\").");
+					test_fail(__func__, 5, optional, "Invoke filler callback with one of the files just created (\"%s\").", new_file_1);
 				}
 			} else {
 				test_skip(__func__, 5, optional);
@@ -679,7 +679,7 @@ void test_readdir(const struct fuse_operations * op) {
 				if(filled_new_file_2) {
 					test_pass(__func__, 6, optional);
 				} else {
-					test_fail(__func__, 6, optional, "Invoke filler callback with one of the files just created (\"new_file_2.txt\").");
+					test_fail(__func__, 6, optional, "Invoke filler callback with one of the files just created (\"%s\").", new_file_2);
 				}
 			} else {
 				test_skip(__func__, 6, optional);
@@ -689,7 +689,7 @@ void test_readdir(const struct fuse_operations * op) {
 				if(files_filled == 4) {
 					test_pass(__func__, 7, optional);
 				} else {
-					test_fail(__func__, 7, optional, "Filler callback needs to be invoked exactly 4 times, for each of the 4 files that should exist in the root directory.");
+					test_fail(__func__, 7, optional, "Filler callback needs to be invoked exactly 4 times, for each of the 4 files that should exist in the root directory (\".\", \"..\", \"%s\", \"%s\"). It was invoked %d times.", new_file_1, new_file_2, files_filled);
 				}
 			} else {
 				test_skip(__func__, 7, optional);
@@ -740,7 +740,7 @@ void test_open(const struct fuse_operations * op) {
 				test_pass("test_create", 2, optional);
 
 				// Open the file
-				struct fuse_file_info * fi = malloc(sizeof(struct fuse_file_info));
+				fi->flags = O_RDWR;
 				retval = op->open(new_file, fi);
 				if(retval == 0) {
 					test_pass(__func__, 1, optional);
@@ -765,6 +765,7 @@ void test_open(const struct fuse_operations * op) {
 		// Shouldn't be able to open a nonexistent file
 		if(!is_skipped(__func__, 2)) {
 			struct fuse_file_info * fi = malloc(sizeof(struct fuse_file_info));
+			fi->flags = O_RDWR;
 			int retval = op->open(non_existent_file, fi);
 			if(retval == 0) {
 				test_fail(__func__, 2, optional, "Return a negative number if a file cannot be opened. It currently returns %d when called with a non-existent path (\"%s\").", retval, non_existent_file);
@@ -874,65 +875,6 @@ void test_read_and_write(const struct fuse_operations * op) {
 
 	} else {
 		test_fail("test_write", 0, optional, function_not_defined_err);
-	}
-}
-
-
-
-
-void test_setxattr(const struct fuse_operations * op);
-void test_setxattr(const struct fuse_operations * op) {
-	if(test_failed) return;
-	bool optional = false;
-	if(is_skipped(__func__, 0)) return test_skip(__func__, 0, optional);
-
-	if(op->setxattr != NULL) {
-		test_pass(__func__, 0, optional);
-		// TODO: Set an extended attribute. See setxattr(2)
-	} else {
-		test_fail(__func__, 0, optional, function_not_defined_err);
-	}
-}
-
-void test_getxattr(const struct fuse_operations * op);
-void test_getxattr(const struct fuse_operations * op) {
-	if(test_failed) return;
-	bool optional = false;
-	if(is_skipped(__func__, 0)) return test_skip(__func__, 0, optional);
-
-	if(op->getxattr != NULL) {
-		test_pass(__func__, 0, optional);
-		// TODO: Read an extended attribute. See getxattr(2)
-	} else {
-		test_fail(__func__, 0, optional, function_not_defined_err);
-	}
-}
-
-void test_listxattr(const struct fuse_operations * op);
-void test_listxattr(const struct fuse_operations * op) {
-	if(test_failed) return;
-	bool optional = false;
-	if(is_skipped(__func__, 0)) return test_skip(__func__, 0, optional);
-
-	if(op->listxattr != NULL) {
-		test_pass(__func__, 0, optional);
-		// TODO: List the names of all extended attributes. See listxattr(2)
-	} else {
-		test_fail(__func__, 0, optional, function_not_defined_err);
-	}
-}
-
-void test_removexattr(const struct fuse_operations * op);
-void test_removexattr(const struct fuse_operations * op) {
-	if(test_failed) return;
-	bool optional = false;
-	if(is_skipped(__func__, 0)) return test_skip(__func__, 0, optional);
-
-	if(op->removexattr != NULL) {
-		test_pass(__func__, 0, optional);
-		// TODO: Remove extended attributes
-	} else {
-		test_fail(__func__, 0, optional, function_not_defined_err);
 	}
 }
 
@@ -1235,13 +1177,6 @@ void fwizard_init(const struct fuse_operations * op, size_t op_size) {
 	// reading and writing
 	test_open(op);
 	test_read_and_write(op);
-
-	// extended attributes
-	// TODO: These should be implemented only if HAVE_SETXATTR is true.
-	test_setxattr(op);
-	test_getxattr(op);
-	test_listxattr(op);
-	test_removexattr(op);
 
 	// links
 	test_symlink(op);

@@ -7,6 +7,7 @@ typedef void (*stopToolFunc)(void);
 typedef stopToolFunc (*startToolFunc)(void);
 typedef enum {IMPLEMENTED, DEFINED, UNDEFINED, SKIPPED} funcstat;
 
+char * bufferToAscii(const char * str);
 cJSON * getFunctionSignature(const char * name);
 cJSON * getFunctionResources(const char * name);
 void setStopToolFunction(stopToolFunc f);

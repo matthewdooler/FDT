@@ -721,7 +721,10 @@ int fuse_op_wrapper_read(void *fs_ptr, const char * path, char * buf, size_t siz
     int r = fs->op.read(path, buf, size, offset, fi);
 
     cJSON *modified_params = cJSON_CreateObject();
-    cJSON_AddStringToObject(modified_params, "buf", buf);
+	char buf_cpy[r+1];
+	strncpy(buf_cpy, buf, r);
+	buf_cpy[r] = '\0';
+    cJSON_AddStringToObject(modified_params, "buf", buf_cpy);
     cJSON_AddItemToObject(modified_params, "fi", fuseFileInfoToJSONObject(fi));
     report_fs_call_return(fs, "read", seqnum, &r, modified_params);
     return r;
@@ -733,7 +736,10 @@ int fuse_op_wrapper_write(void *fs_ptr, const char * path, const char * buf, siz
 
     cJSON *params = cJSON_CreateObject();	
 	cJSON_AddStringToObject(params, "path", path);
-	cJSON_AddStringToObject(params, "buf", buf);
+	char buf_cpy[size+1];
+	strncpy(buf_cpy, buf, size);
+	buf_cpy[size] = '\0';
+	cJSON_AddStringToObject(params, "buf", buf_cpy);
 	cJSON_AddNumberToObject(params, "size", size);
 	cJSON_AddNumberToObject(params, "offset", offset);
 	cJSON_AddItemToObject(params, "fi", fuseFileInfoToJSONObject(fi));

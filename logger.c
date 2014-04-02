@@ -305,6 +305,8 @@ void doStartLogger() {
         
         // Construct a chunk of JSON
         int unclosed_braces = 0;
+        bool unclosed_quotes = false;
+        bool escaping = false;
         chunk_pos = 0;
         
         do {
@@ -322,8 +324,12 @@ void doStartLogger() {
                     json_chunk = realloc(json_chunk, json_chunk_capacity);
                 }
                 json_chunk[chunk_pos++] = (char) c;
-                if(c == '{') unclosed_braces++;
-                if(c == '}') unclosed_braces--;
+                if(!unclosed_quotes && c == '{') unclosed_braces++;
+                else if(!unclosed_quotes && c == '}') unclosed_braces--;
+                else if(!escaping && c == '"') unclosed_quotes = !unclosed_quotes;
+
+                if(c == '\\') escaping = true;
+                else escaping = false;
             }
         } while(unclosed_braces > 0);
         json_chunk[chunk_pos++] = '\0';
