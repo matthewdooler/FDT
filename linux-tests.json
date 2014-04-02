@@ -1,0 +1,8907 @@
+[[{
+			"action":	"Mounted the filesystem",
+			"application":	"GNOME",
+			"os":	"Linux 2.6.32-358.18.1.el6.x86_64",
+			"calls":	[{
+					"name":	"init",
+					"params":	{
+						"conn":	{
+							"proto_major":	7,
+							"proto_minor":	13,
+							"async_read":	1,
+							"max_write":	131072,
+							"max_readahead":	131072,
+							"capable":	123,
+							"want":	16,
+							"max_background":	0,
+							"congestion_threshold":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}]
+		}, {
+			"action":	"Navigated to mountpoint",
+			"application":	"GNOME",
+			"os":	"Linux 2.6.32-358.18.1.el6.x86_64",
+			"calls":	[{
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.hidden",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"opendir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	624640,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140681519567152,
+						"filler":	140681798303744,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681519567280,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681519567280,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"size":	8192,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"size":	8192,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"size":	16384,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"size":	16384,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"size":	8192,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"size":	8192,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"mask":	1
+					}
+				}, {
+					"name":	"releasedir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681519567280,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681519567280,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}]
+		}, {
+			"action":	"Created a folder",
+			"application":	"GNOME",
+			"os":	"Linux 2.6.32-358.18.1.el6.x86_64",
+			"calls":	[{
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/untitled folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"mkdir",
+					"params":	{
+						"path":	"/untitled folder",
+						"mode":	493
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/untitled folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"opendir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	624640,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140681519564992,
+						"filler":	140681798303744,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681519567008,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681519567008,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"releasedir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681519567008,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681519567008,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/untitled folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"opendir",
+					"params":	{
+						"path":	"/untitled folder",
+						"fi":	{
+							"flags":	624640,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/untitled folder",
+						"buf":	140681452456688,
+						"filler":	140681798303744,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681452458688,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681452458688,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"releasedir",
+					"params":	{
+						"path":	"/untitled folder",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681452458688,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681452458688,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test Folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/untitled folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test Folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"rename",
+					"params":	{
+						"path":	"/untitled folder",
+						"newpath":	"/Test Folder"
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test Folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	1
+					}
+				}]
+		}, {
+			"action":	"Navigated to folder and clicked back",
+			"application":	"GNOME",
+			"os":	"Linux 2.6.32-358.18.1.el6.x86_64",
+			"calls":	[{
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test Folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test Folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/Test Folder",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/Test Folder",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"opendir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	624640,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140681251132448,
+						"filler":	140681798303744,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681251133952,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681251133952,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test Folder/.hidden",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"opendir",
+					"params":	{
+						"path":	"/Test Folder",
+						"fi":	{
+							"flags":	624640,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"releasedir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681251133952,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681251133952,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/Test Folder",
+						"buf":	140681452459840,
+						"filler":	140681798303744,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681452459968,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681452459968,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test Folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.hidden",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"opendir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	624640,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"releasedir",
+					"params":	{
+						"path":	"/Test Folder",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681452459968,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681452459968,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140681519567728,
+						"filler":	140681798303744,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681519600112,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681519600112,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"size":	8192,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"mask":	1
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"size":	8192,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"mask":	1
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"size":	16384,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"mask":	1
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"size":	16384,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"mask":	1
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"size":	8192,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"mask":	1
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"size":	8192,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"mask":	1
+					}
+				}, {
+					"name":	"releasedir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681519600112,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681519600112,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test Folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	0
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}]
+		}, {
+			"action":	"Created a test file",
+			"application":	"GNOME",
+			"os":	"Linux 2.6.32-358.18.1.el6.x86_64",
+			"calls":	[{
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/new file",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"create",
+					"params":	{
+						"path":	"/new file",
+						"mode":	33188,
+						"fi":	{
+							"flags":	32961,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"fgetattr",
+					"params":	{
+						"path":	"/new file",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						},
+						"fi":	{
+							"flags":	32961,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	32769,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"opendir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	624640,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140681385352736,
+						"filler":	140681798303744,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681385366272,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681385366272,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test Folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/new file",
+						"size":	4096,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	4
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"fgetattr",
+					"params":	{
+						"path":	"/new file",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						},
+						"fi":	{
+							"flags":	0,
+							"fh_old":	7,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	7,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/new file",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/new file",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/new file",
+						"size":	4096,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	7,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	7,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	1
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	7,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	7,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	7,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	7,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	4
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/new file",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"fgetattr",
+					"params":	{
+						"path":	"/new file",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						},
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	2
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/new file",
+						"size":	4096,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"releasedir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681385366272,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681385366272,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/new file",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	4
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/new file",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	2
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	1
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/new file",
+						"size":	4096,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"fgetattr",
+					"params":	{
+						"path":	"/new file",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						},
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/new file",
+						"size":	4096,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	2
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	6,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	6,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/new file",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	4
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/new file",
+						"size":	4096,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/new file",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/new file",
+						"size":	4096,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/new file",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/new file",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/new file",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test File.txt",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/new file",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test File.txt",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"rename",
+					"params":	{
+						"path":	"/new file",
+						"newpath":	"/Test File.txt"
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test File.txt",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test File.txt",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test File.txt",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test File.txt",
+						"mask":	1
+					}
+				}]
+		}, {
+			"action":	"Opened file",
+			"application":	"Sublime Text 2",
+			"os":	"Linux 2.6.32-358.18.1.el6.x86_64",
+			"calls":	[{
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test File.txt",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/Test File.txt",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/Test File.txt",
+						"size":	4096,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/Test File.txt",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	1746343375914327552
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/Test File.txt",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}]
+		}, {
+			"action":	"Saved file",
+			"application":	"Sublime Text 2",
+			"os":	"Linux 2.6.32-358.18.1.el6.x86_64",
+			"calls":	[{
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test File.txt",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test File.txt",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test File.txt",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/Test File.txt",
+						"fi":	{
+							"flags":	32769,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"ftruncate",
+					"params":	{
+						"path":	"/Test File.txt",
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"fgetattr",
+					"params":	{
+						"path":	"/Test File.txt",
+						"stat":	{
+							"st_dev":	140681797980216,
+							"st_ino":	140681798365536,
+							"st_mode":	144502321,
+							"st_nlink":	140681653788416,
+							"st_uid":	32755,
+							"st_gid":	9,
+							"st_rdev":	0,
+							"st_size":	35877592,
+							"st_atime":	35877488,
+							"st_mtime":	35877592,
+							"st_ctime":	140681797975232,
+							"st_blksize":	140681798282911,
+							"st_blocks":	35877488
+						},
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getxattr",
+					"params":	{
+						"path":	"/Test File.txt",
+						"name":	"security.capability",
+						"value":	0,
+						"size":	0
+					}
+				}, {
+					"name":	"write",
+					"params":	{
+						"path":	"/Test File.txt",
+						"buf":	"test data\non multiple lines",
+						"size":	27,
+						"offset":	0,
+						"fi":	{
+							"flags":	32769,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"fsync",
+					"params":	{
+						"path":	"/Test File.txt",
+						"datasync":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/Test File.txt",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	1746343375914327552
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/Test File.txt",
+						"fi":	{
+							"flags":	32769,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test File.txt",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}]
+		}, {
+			"action":	"Refreshed directory",
+			"application":	"GNOME",
+			"os":	"Linux 2.6.32-358.18.1.el6.x86_64",
+			"calls":	[{
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test File.txt",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"opendir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	624640,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140681251133472,
+						"filler":	140681798303744,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681251134048,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681251134048,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test Folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test File.txt",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"releasedir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681251134048,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681251134048,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"opendir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	624640,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.hidden",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"opendir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	624640,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"releasedir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681116916576,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681116916576,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test File.txt",
+						"mask":	4
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/",
+						"buf":	140681385348016,
+						"filler":	140681798303744,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681385366272,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681385366272,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test File.txt",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test File.txt",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	4
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test Folder",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"size":	8192,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"mask":	4
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"size":	8192,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	7,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	7,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"mask":	2
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	7,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	7,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"mask":	1
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	7,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	7,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"mask":	4
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"mask":	2
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"size":	8192,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa2700000016",
+						"mask":	1
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test File.txt",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test File.txt",
+						"mask":	2
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"size":	8192,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/Test File.txt",
+						"mask":	1
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"mask":	2
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"size":	16384,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa340000001d",
+						"mask":	1
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"size":	16384,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"size":	16384,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	7,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	7,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	7,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	7,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	7,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	7,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004ac5a00000024",
+						"mask":	1
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"size":	8192,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"mask":	2
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"size":	16384,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"mask":	1
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"mask":	4
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"mask":	2
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aae100000021",
+						"mask":	1
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"size":	8192,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.Trash-16937",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004a9df00000011",
+						"mask":	1
+					}
+				}, {
+					"name":	"open",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"read",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"size":	8192,
+						"offset":	0,
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test File.txt",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"releasedir",
+					"params":	{
+						"path":	"/",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681385366272,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681385366272,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"statfs",
+					"params":	{
+						"path":	"/Test File.txt",
+						"statvfs":	{
+							"f_bsize":	0,
+							"f_frsize":	0,
+							"f_blocks":	0,
+							"f_bfree":	0,
+							"f_bavail":	0,
+							"f_files":	0,
+							"f_ffree":	0,
+							"f_favail":	0,
+							"f_fsid":	0,
+							"f_flag":	0,
+							"f_namemax":	0
+						}
+					}
+				}, {
+					"name":	"flush",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	1,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	4267630087010636288
+						}
+					}
+				}, {
+					"name":	"release",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"fi":	{
+							"flags":	32768,
+							"fh_old":	5,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	5,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"mask":	4
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/Test Folder",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"mask":	2
+					}
+				}, {
+					"name":	"opendir",
+					"params":	{
+						"path":	"/Test Folder",
+						"fi":	{
+							"flags":	624640,
+							"fh_old":	0,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	0,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	4
+					}
+				}, {
+					"name":	"getattr",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"stat":	{
+							"st_dev":	0,
+							"st_ino":	0,
+							"st_mode":	0,
+							"st_nlink":	0,
+							"st_uid":	0,
+							"st_gid":	0,
+							"st_rdev":	0,
+							"st_size":	0,
+							"st_atime":	0,
+							"st_mtime":	0,
+							"st_ctime":	0,
+							"st_blksize":	0,
+							"st_blocks":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	2
+					}
+				}, {
+					"name":	"readdir",
+					"params":	{
+						"path":	"/Test Folder",
+						"buf":	140681653791008,
+						"filler":	140681798303744,
+						"offset":	0,
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681653798656,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681653798656,
+							"lock_owner":	0
+						}
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/",
+						"mask":	1
+					}
+				}, {
+					"name":	"access",
+					"params":	{
+						"path":	"/.nfs000000000004aa1000000014",
+						"mask":	1
+					}
+				}, {
+					"name":	"releasedir",
+					"params":	{
+						"path":	"/Test Folder",
+						"fi":	{
+							"flags":	0,
+							"fh_old":	140681653798656,
+							"writepage":	0,
+							"direct_io":	0,
+							"keep_cache":	0,
+							"flush":	0,
+							"nonseekable":	0,
+							"padding":	0,
+							"fh":	140681653798656,
+							"lock_owner":	0
+						}
+					}
+				}]
+		}]]
