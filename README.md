@@ -1,7 +1,7 @@
 FDT: FUSE Diagnostic Tool
 ===
 
-Development toolkit for writing FUSE filesystems, providing fully automated testing and advanced debugging facilities.
+Development toolkit for writing FUSE filesystems, providing automated testing and debugging facilities.
 
 Features
 ---
@@ -15,7 +15,7 @@ How it works
 ---
 The tool intercepts FUSE API calls at the userspace level by wrapping the existing FUSE library.
 
-Mounting a FUSE filesystem with the tool will use our modified library, allowing artificial calls to be made against the filesystem for testing and providing visualisation and control over execution of real functions.
+Mounting a FUSE filesystem with the tool will use a modified library, allowing artificial calls to be made against the filesystem for testing and providing visualisation and control over execution of real functions.
 
 It runs on Linux using the standard libfuse library, and for Mac OS X compatibility it uses osxfuse.
 
